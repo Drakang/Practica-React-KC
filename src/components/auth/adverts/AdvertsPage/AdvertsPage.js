@@ -10,7 +10,6 @@ import Layout from "../../layout/Layout";
 const AdvertsPage = () => {
   const [adverts, setAdverts] = useState([]);
   const [filterAds, setFilterAds] = useState([]);
-  console.log(adverts.length)
   useEffect(() => {
     getAdverts()
       .then(setAdverts)

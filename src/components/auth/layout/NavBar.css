@@ -1,7 +1,6 @@
 nav ul {
   display: flex;
   justify-content: flex-end;
-  margin: 0;
 }
 
 nav ul li {
@@ -9,7 +8,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: green;
+  color: rgb(255, 255, 255);
 }
 
 .logout-confirm {
@@ -65,7 +64,11 @@ nav ul li a {
 	border: none;
 	cursor: pointer;
 }
-
+.link_log{
+}
+.link_li{
+	
+}
 .logout-confirm button:hover{
   background-color: rgba(17, 97, 237, 1);
 }

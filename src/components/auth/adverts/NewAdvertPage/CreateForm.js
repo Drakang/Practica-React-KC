@@ -12,7 +12,7 @@ const CreateForm = ({ onSubmit }) => {
     name: "",
     sale: true,
     price: 0,
-    photo: null,
+    photo: "",
   })
 
   const handleSubmit = async (event) => {
@@ -23,10 +23,6 @@ const CreateForm = ({ onSubmit }) => {
       const { id } = await createAdvert(data)
       onSubmit(id)
     } catch (error) {
-      globalState.name = ""
-      globalState.sale= true
-      globalState.price= 0
-      globalState.photo= null
       console.error(error)
     }
   }
@@ -45,7 +41,7 @@ const CreateForm = ({ onSubmit }) => {
         <InputFile setState={setGlobalState} />
         <br />
         <br />
-        <button type="submit">Crear</button>
+        <button type="submit">No funca</button>
       </form>
     </>
   )

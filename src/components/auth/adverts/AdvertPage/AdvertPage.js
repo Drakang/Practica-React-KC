@@ -24,12 +24,12 @@ const AdvertPage = () => {
 
   const onDelete = () => {
     deleteAdverts(id);
-    navigate("/", {replace: true });
+    navigate("/", { replace: true });
   };
 
   return (
-    <Layout title={advert.name}>
-      <div className="adv_container">
+    <div className="adv_container">
+      <Layout title={advert.name}>
         <div className="img_container">
           <img
             src={advert.photo || placeholder}
@@ -37,26 +37,29 @@ const AdvertPage = () => {
           />
         </div>
         <br />
-        <label>{advert.sale ? "Venta" : "Compra"}</label>
-        <p>Precio: {advert.price}</p>
-        <p>Publicado en:
-          <time className="">
-            {new Date(advert.createdAt).getFullYear()}-
-            {new Date(advert.createdAt).getMonth() + 1}-
-            {new Date(advert.createdAt).getDate()}
-          </time>
-        </p>
-        <div>
-          {advert.tags?.map((tag, index) => (
-            <span key={index}>
-              <small>{tag}</small>
-              <br />
-            </span>
-          ))}
+        <div className="text_container">
+          <span>{advert.sale ? "Venta" : "Compra"}</span>
+          <p>Precio: {advert.price}</p>
+          <div>
+            Publicado en:
+            <time className="">
+              {new Date(advert.createdAt).getFullYear()}-
+              {new Date(advert.createdAt).getMonth() + 1}-
+              {new Date(advert.createdAt).getDate()}
+            </time>
+          </div>
+          <div className="tag_container">
+            {advert.tags?.map((tag, index) => (
+              <span key={index}>
+                <span>Filtro: {tag}</span>
+                <br />
+              </span>
+            ))}
+          </div>
         </div>
         <DeleteAdButton onDelete={onDelete} />
-      </div>
-    </Layout>
+      </Layout>
+    </div>
   );
 };
 

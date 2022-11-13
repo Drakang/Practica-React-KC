@@ -11,10 +11,10 @@ const DeleteAdButton = ({ onDelete }) => {
 
   return (
     <>
-      <Button onClick={handleClick}>Borrar Anuncio</Button>
+      <Button onClick={handleClick} className="button_delete">Borrar Anuncio</Button>
       <Confirmation
         className={classNames("delete-confirm", { hidden: !showConfirm })}
-        msg={"¿Seguro que quieres borrarlo?"}
+        msg={"¿Borrar Anuncio?"}
         showConfirm={setShowConfirm}
         onConfirm={onDelete}
       />
