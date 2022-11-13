@@ -20,24 +20,34 @@
      If you do correctly you should have access to the adverts page, in this view you can see all the adverts, but if its your first time, should gonna make some
 
 ![image](https://user-images.githubusercontent.com/103906418/201542606-9ac7fb0e-db42-4b02-97e2-d8f65860dbee.png)
+![image](https://user-images.githubusercontent.com/103906418/201542776-44bf0e9c-72c0-410c-8b15-c3e3acec174c.png)
 
 #
-
-
      If you wanna filter the adverts you can select it by:
       -Name
       -Type
       -Sell Status
       -Price Min-Max
       -Tags
+      
+![image](https://user-images.githubusercontent.com/103906418/201542675-2c5e0f29-252a-4f49-a0aa-24931a70f393.png)
+
 #
+
 
      Also you can see the details of the adverts clicking on the advert in the main page.
-#
 
+![image](https://user-images.githubusercontent.com/103906418/201542728-7a50d98a-d0f0-4d69-8f77-067a6d73de77.png)
+
+#
      You can delete the advert on this detail page(that launch a confirmation message if you dont want to delete it 😉😉😉😉)
+
+![image](https://user-images.githubusercontent.com/103906418/201542747-747bd0ef-214d-4267-aeee-b61f60e64158.png)
 #
     To get out the adverts page and return to the login you can logout clicking on the Logout button on the right-top of the page(Another confirmation message will appear 😉😉😉😉)
+
+![image](https://user-images.githubusercontent.com/103906418/201542796-b87c4a0c-2e19-4caa-ac44-f8e87a9a33ed.png)
+![image](https://user-images.githubusercontent.com/103906418/201542822-b9f5f83b-6c46-4b73-9488-579de86e7fed.png)
 
 #
 # Getting Started with Create React App
