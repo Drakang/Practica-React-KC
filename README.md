@@ -19,7 +19,10 @@
 
      If you do correctly you should have access to the adverts page, in this view you can see all the adverts, but if its your first time, should gonna make some
 
+![image](https://user-images.githubusercontent.com/103906418/201542606-9ac7fb0e-db42-4b02-97e2-d8f65860dbee.png)
+
 #
+
 
      If you wanna filter the adverts you can select it by:
       -Name
