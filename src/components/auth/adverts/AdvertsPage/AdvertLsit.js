@@ -19,13 +19,13 @@ const AdvertsList = ({ adverts }) => {
                           alt={`Imagen de ${advert.name}`}
                         ></img>
                       </div>
-                      <label>{advert.sale ? "Venta" : "Compra"}</label>
+                      <label className="princi_ad">Estado:{advert.sale ? "Venta" : "Compra"}</label>
                       <br></br>
-                      <label>Precio: {advert.price}</label>
+                      <label className="princi_ad">Precio: {advert.price}€</label>
                       <div>
                         {advert.tags?.map((tag, index) => (
                           <span key={index}>
-                            <label>{tag}</label>{" "}
+                            <label className="princi_ad">{tag}</label>{" "}
                           </span>
                         ))}
                       </div>

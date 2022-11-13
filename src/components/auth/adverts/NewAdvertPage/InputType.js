@@ -1,25 +1,26 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 
 const InputType = ({ setState }) => {
-  const [value, setValue] = useState(true)
+  const [value, setValue] = useState(true);
 
   useEffect(() => {
     setState((prev) => ({
       ...prev,
       sale: value,
-    }))
-  }, [setState, value])
+    }));
+  }, [setState, value]);
 
   const handleChange = ({ target }) => {
-    setValue(target.value === "true")
-  }
+    setValue(target.value === "true");
+  };
 
   return (
     <>
-      <label>Tipo de anuncio: </label>
-      <label>
+      <label className="ad_name">Tipo de anuncio: </label>
+      <label className="ad_name">
         Venta
         <input
+          className="venta_ad"
           type="radio"
           name="sale"
           checked={value === true}
@@ -28,9 +29,10 @@ const InputType = ({ setState }) => {
           onChange={handleChange}
         />
       </label>
-      <label>
+      <label className="ad_name">
         Compra
         <input
+          className="compra_ad"
           type="radio"
           name="sale"
           value={false}
@@ -39,7 +41,7 @@ const InputType = ({ setState }) => {
         />
       </label>
     </>
-  )
-}
+  );
+};
 
-export default InputType
+export default InputType;

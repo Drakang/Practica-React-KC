@@ -28,8 +28,7 @@ export const getAdverts = async () => {
 
 export const createAdvert = async (data) => {
   const url = `/api/v1/adverts`
-  const config = { headers: { "content-type": "multipart/form-data" } }
-  return await client.post(url, data, config)
+  return await client.post(url, data)
 }
 
 export const getTags = async () => {

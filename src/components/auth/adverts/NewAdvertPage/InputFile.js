@@ -1,8 +1,8 @@
 const InputFile = () => {
   return (
     <>
-      <label>
-        Foto <input name="photo" type="file" />
+      <label className="ad_name">
+        Foto <input className="foto_ad" name="photo" type="file" />
       </label>
     </>
   )

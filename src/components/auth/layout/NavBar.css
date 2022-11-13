@@ -3,8 +3,20 @@ nav ul {
   justify-content: flex-end;
 }
 
-nav ul li {
-  padding: 5px;
+nav{
+  padding: 10px;
+	margin-top: 10px;
+}
+.link_log{
+
+}
+.link_li{
+	height: 80%;
+	padding: 10px 10px;
+	margin-right: 10px;
+	background-color: #199319;
+  color: white;
+  margin-top: 5px;
 }
 
 nav ul li a {
@@ -64,11 +76,7 @@ nav ul li a {
 	border: none;
 	cursor: pointer;
 }
-.link_log{
-}
-.link_li{
-	
-}
+
 .logout-confirm button:hover{
   background-color: rgba(17, 97, 237, 1);
 }

@@ -6,9 +6,10 @@ const InputPrice = ({ setState, name }) => {
 
   return (
     <>
-      <label>
+      <label className="ad_name">
         Precio{" "}
         <input
+          className="precio_ad"
           required
           type="number"
           name={name}

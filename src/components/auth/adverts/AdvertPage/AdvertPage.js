@@ -38,8 +38,8 @@ const AdvertPage = () => {
         </div>
         <br />
         <div className="text_container">
-          <span>{advert.sale ? "Venta" : "Compra"}</span>
-          <p>Precio: {advert.price}</p>
+          <span>Estado:{advert.sale ? "Venta" : "Compra"}</span>
+          <p>Precio: {advert.price}€</p>
           <div>
             Publicado en:
             <time className="">
@@ -49,10 +49,10 @@ const AdvertPage = () => {
             </time>
           </div>
           <div className="tag_container">
+            Filtro:
             {advert.tags?.map((tag, index) => (
               <span key={index}>
-                <span>Filtro: {tag}</span>
-                <br />
+                <span> {tag}</span>
               </span>
             ))}
           </div>

@@ -21,14 +21,18 @@ const PriceFilter = () => {
     <label>
       Busca por rango:{" "}
       <input
+        className="filter_min"
         name="minVal"
+        placeholder="Min"
         type="number"
         value={values.minVal}
         onChange={handleChange}
         min={0}
       />
       <input
+        className="filter_max"
         name="maxVal"
+        placeholder="Max"
         type="number"
         value={values.maxVal}
         onChange={handleChange}

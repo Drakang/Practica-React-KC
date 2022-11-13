@@ -17,7 +17,7 @@ const NameFilter = () => {
     <label>
       Busca por nombre:
       <br />
-      <input name="name-filter" onChange={handleChange} value={value} />
+      <input className="filter_name" name="name-filter" onChange={handleChange} value={value} />
     </label>
   )
 }

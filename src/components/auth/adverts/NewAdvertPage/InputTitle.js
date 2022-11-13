@@ -4,9 +4,10 @@ const InputTitle = ({ setState, name }) => {
   const [value, handleChange] = useInput(setState, name)
 
   return (
-    <label>
+    <label className="ad_name">
       Título del anuncio{"  "}
       <input
+        className="nombre_ad"
         autoFocus
         required
         type="text"

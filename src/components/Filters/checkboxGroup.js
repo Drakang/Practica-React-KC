@@ -1,36 +1,37 @@
-import { useState, useEffect } from "react"
-import { getTags } from "../auth/dataService"
-import { useFilterContext } from "./filterContext"
+import { useState, useEffect } from "react";
+import { getTags } from "../auth/dataService";
+import { useFilterContext } from "./filterContext";
 
 const TagFilter = () => {
-  const [tags, setTags] = useState([])
-  const { filterParams, setFilterParams } = useFilterContext()
-  const [chosen, setChosen] = useState(filterParams.tags)
+  const [tags, setTags] = useState([]);
+  const { filterParams, setFilterParams } = useFilterContext();
+  const [chosen, setChosen] = useState(filterParams.tags);
 
   useEffect(() => {
     getTags()
       .then(setTags)
       .catch((error) => {
-        console.log(error)
-      })
-  }, [])
+        console.log(error);
+      });
+  }, []);
 
   useEffect(() => {
-    setFilterParams((prevValues) => ({ ...prevValues, tags: chosen }))
-  }, [setFilterParams, chosen])
+    setFilterParams((prevValues) => ({ ...prevValues, tags: chosen }));
+  }, [setFilterParams, chosen]);
 
   const handleChange = (event) => {
-    const { value, checked } = event.target
-    setChosen((prev) => ({ ...prev, [value]: checked }))
-  }
+    const { value, checked } = event.target;
+    setChosen((prev) => ({ ...prev, [value]: checked }));
+  };
 
   return (
     <div>
-      Busca por tags:{" "}
+       Busca por tags:{" "}
       {tags.map((tag, index) => (
         <label key={index}>
           {tag}
           <input
+            className="filter_check"
             type="checkbox"
             value={tag}
             onChange={handleChange}
@@ -39,7 +40,7 @@ const TagFilter = () => {
         </label>
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default TagFilter
+export default TagFilter;

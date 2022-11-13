@@ -19,7 +19,7 @@ const SelectGroup = ({ setState }) => {
   }
 
   return (
-    <label>
+    <label className="ad_name , select_custom">
       Tags{" "}
       <select
         name="tags"

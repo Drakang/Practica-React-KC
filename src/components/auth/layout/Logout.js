@@ -19,7 +19,7 @@ const Logout = () => {
   }
 
   const onLogout = ()=>{
-    console.log('hago logout')
+    console.log('logout')
     logout()
     handleLoginState(false)
     navigate("/", { replace: true })

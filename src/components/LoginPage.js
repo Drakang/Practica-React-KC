@@ -46,28 +46,28 @@ const LoginPage = () => {
 
   return (
     <>
-      <div class="login-container">
+      <div className="login-container">
         <h2 className="login_h2">Logeate Aqui </h2>
-        <form onSubmit={handleSubmit} class="form-login">
-          <label for="login-input-user" class="login__label">
+        <form onSubmit={handleSubmit} className="form-login">
+          <label htmlFor="login-input-user" className="login__label">
             Email
           </label>
           <input
             autoFocus
             id="login-input-user"
-            class="login__input"
+            className="login__input"
             placeholder="Email"
             type="email"
             name="email"
             value={inputValues.email}
             onChange={handleInputChange}
           />
-          <label for="login-input-password" class="login__label">
+          <label htmlFor="login-input-password" className="login__label">
             Password
           </label>
           <input
             id="login-input-password"
-            class="login__input"
+            className="login__input"
             placeholder="Password"
             type="password"
             name="password"
@@ -75,10 +75,10 @@ const LoginPage = () => {
             onChange={handleInputChange}
           />
           <br />
-          <label for="login-sign-up" class="login__label--checkbox">
+          <label htmlFor="login-sign-up" className="login__label--checkbox">
             <input
               id="login-sign-up"
-              class="login__input--checkbox"
+              className="login__input--checkbox"
               type="checkbox"
               name="saveCredentials"
               checked={checked}
@@ -87,7 +87,7 @@ const LoginPage = () => {
             Mantener la session iniciada
           </label>
           <br />
-          <button class="login__submit" type="submit">
+          <button className="login__submit" type="submit">
             Enviar
           </button>
         </form>

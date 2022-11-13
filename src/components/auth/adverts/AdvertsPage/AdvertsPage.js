@@ -4,7 +4,7 @@ import { getAdverts } from "../../dataService";
 
 import FilterForm from "../../../Filters/FilterForm";
 import AdvertList from "./AdvertLsit";
-
+import "./AdvertsPage.css"
 import Layout from "../../layout/Layout";
 
 const AdvertsPage = () => {
@@ -23,6 +23,8 @@ const AdvertsPage = () => {
   };
 
   return (
+    <>
+    <div className="ad_containers">
     <Layout link={"new"} title={"Listado de Anuncios"}>
       {adverts.length > 0 ? (
         <>
@@ -40,6 +42,8 @@ const AdvertsPage = () => {
         </>
       )}
     </Layout>
+    </div>
+    </>
   );
 };
 

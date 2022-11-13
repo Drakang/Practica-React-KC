@@ -15,7 +15,7 @@
 
 .adv_list {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-template-rows: auto;
   gap: 20px;
   justify-self: stretch;
@@ -54,7 +54,7 @@ img{
   font-size: 20px;
   padding-left: 5px;
 }
-label{
+.princi_ad{
   color: black;
   font-size: 20px;
   padding-left: 5px;
