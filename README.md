@@ -19,7 +19,6 @@
      If you do correctly you should have access to the adverts page, in this view you can see all the adverts, but if its your first time, should gonna make some
 
 
-
     If you wanna filter the adverts you can select it by:
       -Name
       -Type
