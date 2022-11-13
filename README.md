@@ -15,11 +15,14 @@
 
 ### Login with the email and password you should put on the swagger before( if mark the checkbox you will still loged though you close the app)
 
+        ![image](https://user-images.githubusercontent.com/103906418/201542131-d9ce6b28-9935-40ea-b6f8-d235eff26fa0.png)
+
+
 
      If you do correctly you should have access to the adverts page, in this view you can see all the adverts, but if its your first time, should gonna make some
 
 
-    If you wanna filter the adverts you can select it by:
+     If you wanna filter the adverts you can select it by:
       -Name
       -Type
       -Sell Status
