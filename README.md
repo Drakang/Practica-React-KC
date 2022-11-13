@@ -1,3 +1,49 @@
+#
+# For the use of this app you will need to clone/download the next two repositorys.
+
+1. For the app this one [Reactapp](https://github.com/Drakang/Practica-React-KC)
+2. For the backend this one [Nodepop-api](https://github.com/davidjj76/nodepop-api)
+
+
+## How it works:
+
+    Run with NPM I to install dependencies and then run the api with NPM START, that gonna run on your localhost:3001 and you can take access to a swagger, will need to create a user to start with the app.
+
+
+    Run the app with NPM I to install dependencies and run the app with NPM START, that gonna run on your localhost:3000 and can take acces to the login page
+
+
+### Login with the email and password you should put on the swagger before( if mark the checkbox you will still loged though you close the app)
+
+
+     If you do correctly you should have access to the adverts page, in this view you can see all the adverts, but if its your first time, should gonna make some
+
+
+
+    If you wanna filter the adverts you can select it by:
+      -Name
+      -Type
+      -Sell Status
+      -Price Min-Max
+      -Tags
+
+
+
+
+     Also you can see the details of the adverts clicking on the advert in the main page.
+
+
+
+
+     You can delete the advert on this detail page(that launch a confirmation message if you dont want to delete it 😉😉😉😉)
+
+
+
+     To get out the adverts page and return to the login you can logout clicking on the Logout button on the right-top of the page(Another confirmation message will appear 😉😉😉😉)
+
+
+
+#
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
