@@ -15,12 +15,11 @@
 
 ### Login with the email and password you should put on the swagger before( if mark the checkbox you will still loged though you close the app)
 
-        ![image](https://user-images.githubusercontent.com/103906418/201542131-d9ce6b28-9935-40ea-b6f8-d235eff26fa0.png)
-
-
+![image](https://user-images.githubusercontent.com/103906418/201542131-d9ce6b28-9935-40ea-b6f8-d235eff26fa0.png)
 
      If you do correctly you should have access to the adverts page, in this view you can see all the adverts, but if its your first time, should gonna make some
 
+#
 
      If you wanna filter the adverts you can select it by:
       -Name
@@ -28,22 +27,14 @@
       -Sell Status
       -Price Min-Max
       -Tags
-
-
-
+#
 
      Also you can see the details of the adverts clicking on the advert in the main page.
-
-
-
+#
 
      You can delete the advert on this detail page(that launch a confirmation message if you dont want to delete it 😉😉😉😉)
-
-
-
-     To get out the adverts page and return to the login you can logout clicking on the Logout button on the right-top of the page(Another confirmation message will appear 😉😉😉😉)
-
-
+#
+    To get out the adverts page and return to the login you can logout clicking on the Logout button on the right-top of the page(Another confirmation message will appear 😉😉😉😉)
 
 #
 # Getting Started with Create React App
