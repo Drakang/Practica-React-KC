@@ -1,0 +1,71 @@
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+}
+
+nav ul li {
+  padding: 5px;
+}
+
+nav ul li a {
+  color: green;
+}
+
+.logout-confirm {
+  display: block;
+	position: absolute;
+	z-index: 0;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #ffffff;
+  padding: 25px 15px;
+  border-radius: 10px;
+	margin:auto auto;
+	width: 250px;
+  height: 250px;
+	max-width: 500px;
+	background-image: url(https://ms314006.github.io/static/b7a8f321b0bbc07ca9b9d22a7a505ed5/97b31/React.jpg);
+	box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.85);
+}
+.logout-confirm p{
+  margin: 0;
+  text-align: center;
+}
+
+
+.logout-confirm{
+  content: '';
+	display: inline-block;
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: radial-gradient(ellipse at left bottom, rgba(22, 24, 47, 1) 0%,rgba(5, 26, 121, 0.9) 59%, rgba(17, 27, 75, .9) 100%);
+	box-shadow: 0 -20px 150px -20px rgba(0, 0, 0, 0.5);
+}
+.logout-confirm button:first-of-type{
+  margin-top: 40px;
+}
+
+.logout-confirm button {
+  color: #ffffff;
+	font-size: 1rem;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-top: 1rem;
+	padding: .75rem;
+	border-radius: 2rem;
+	display: block;
+	width: 100%;
+	background-color: rgba(17, 97, 237, .75);
+	border: none;
+	cursor: pointer;
+}
+
+.logout-confirm button:hover{
+  background-color: rgba(17, 97, 237, 1);
+}
