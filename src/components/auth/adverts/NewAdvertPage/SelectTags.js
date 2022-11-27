@@ -4,15 +4,14 @@ import { getTags } from "../../dataService";
 const SelectGroup = ({ setState }) => {
   const [value, setValue] = useState([]);
   const [tags, setTags] = useState([]);
-  
-  
+
   useEffect(() => {
-   getTags()
-   .then(setTags)
-   .catch((error)=>{
-    console.log(error.status)
-   })
-  },[]);
+    getTags()
+      .then(setTags)
+      .catch((error) => {
+        console.log(error.status);
+      });
+  }, []);
 
   useEffect(() => {
     setState((prev) => ({
