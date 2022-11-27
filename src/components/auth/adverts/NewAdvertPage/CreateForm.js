@@ -13,14 +13,12 @@ const CreateForm = ({ onSubmit }) => {
     price: 0,
     photo: "",
   })
-
   const handleSubmit = async (event) => {
     event.preventDefault()
     const data = new FormData(event.target)
     console.log(data)
 
     try {
-      /* const { id } = await createAdvert(data) */
       const {id} = await createAdvert(data)
       onSubmit(id)
     } catch (error) {

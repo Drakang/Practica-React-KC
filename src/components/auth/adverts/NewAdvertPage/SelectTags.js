@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { getTags } from "../../dataService";
 
 const SelectGroup = ({ setState }) => {
-  const [value, setValue] = useState([]);
   const [tags, setTags] = useState([]);
 
   useEffect(() => {
@@ -13,19 +12,15 @@ const SelectGroup = ({ setState }) => {
       });
   }, []);
 
-  useEffect(() => {
-    setState((prev) => ({
-      ...prev,
-      tags: value,
-    }));
-  }, [setState, value]);
-
   const handleChange = ({ target }) => {
     const tags = [...target.children];
     const filteredTags = tags
       .filter((option) => option.selected)
       .map((option) => option.value);
-    setValue(filteredTags);
+    setState((prev)=>({
+      ...prev,
+      tags: filteredTags
+     }))
   };
 
   return (
@@ -33,7 +28,6 @@ const SelectGroup = ({ setState }) => {
       Tags
       <select
         name="tags"
-        value={value}
         multiple={true}
         onChange={handleChange}
         required
