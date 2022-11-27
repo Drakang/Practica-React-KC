@@ -1,26 +1,37 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
+import { getTags } from "../../dataService";
 
 const SelectGroup = ({ setState }) => {
-  const [value, setValue] = useState([])
+  const [value, setValue] = useState([]);
+  const [tags, setTags] = useState([]);
+  
+  
+  useEffect(() => {
+   getTags()
+   .then(setTags)
+   .catch((error)=>{
+    console.log(error.status)
+   })
+  },[]);
 
   useEffect(() => {
     setState((prev) => ({
       ...prev,
       tags: value,
-    }))
-  }, [setState, value])
+    }));
+  }, [setState, value]);
 
   const handleChange = ({ target }) => {
-    const tags = [...target.children]
+    const tags = [...target.children];
     const filteredTags = tags
       .filter((option) => option.selected)
-      .map((option) => option.value)
-    setValue(filteredTags)
-  }
+      .map((option) => option.value);
+    setValue(filteredTags);
+  };
 
   return (
     <label className="ad_name , select_custom">
-      Tags{" "}
+      Tags
       <select
         name="tags"
         value={value}
@@ -28,13 +39,14 @@ const SelectGroup = ({ setState }) => {
         onChange={handleChange}
         required
       >
-        <option value="lifestyle">Lifestyle</option>
-        <option value="mobile">Mobile</option>
-        <option value="motor">Motor</option>
-        <option value="work">Work</option>
+        {tags.map((tag, index) => (
+          <option key={index} value={tag}>
+            {tag}
+          </option>
+        ))}
       </select>
     </label>
-  )
-}
+  );
+};
 
-export default SelectGroup
+export default SelectGroup;
