@@ -26,7 +26,6 @@ const FilterForm = ({ adverts, onFilter }) => {
   useEffect(() => {
     onFilter(filterAds);
   }, [onFilter, filterAds]);
-
   const handleSubmit = (event) => {
     event.preventDeffault();
   };

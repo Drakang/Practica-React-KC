@@ -1,30 +1,42 @@
-import { useState } from "react"
-import InputTitle from "./InputTitle"
-import InputType from "./InputType"
-import InputPrice from "./InputPrice"
-import InputFile from "./InputFile"
-import SelectGroup from "./SelectTags"
-import { createAdvert } from "../../dataService"
+import { useState } from "react";
+import InputTitle from "./InputTitle";
+import InputType from "./InputType";
+import InputPrice from "./InputPrice";
+import InputFile from "./InputFile";
+import SelectGroup from "./SelectTags";
+import { createAdvert } from "../../dataService";
+import { useNavigate } from "react-router-dom";
 
-const CreateForm = ({ onSubmit }) => {
+const CreateForm = () => {
   const [globalState, setGlobalState] = useState({
     name: "",
     sale: true,
-    price: 0,
-    photo: "",
-  })
+    tags: [],
+    price: "",
+    photo: null,
+  });
+
+  const navigate = useNavigate();
+
+  const handlefileChange = (event) => {
+    setGlobalState({
+      ...globalState,
+      [event.target.name]: event.target.files[0],
+    });
+  };
+
   const handleSubmit = async (event) => {
-    event.preventDefault()
-    const data = new FormData(event.target)
-    console.log(data)
+    event.preventDefault();
+    const data = globalState;
+    console.log(data);
 
     try {
-      const {id} = await createAdvert(data)
-      onSubmit(id)
+      const { id } = await createAdvert(data);
+      navigate(`/adverts/${id}`);
     } catch (error) {
-      console.error(error)
+      console.error(error);
     }
-  }
+  };
 
   return (
     <>
@@ -37,13 +49,15 @@ const CreateForm = ({ onSubmit }) => {
         <br />
         <SelectGroup setState={setGlobalState} />
         <br />
-        <InputFile setState={setGlobalState} />
+        <InputFile onChange={handlefileChange} />
         <br />
         <br />
-        <button className="button_new" type="submit">Crear Anuncio</button>
+        <button className="button_new" type="submit">
+          Crear Anuncio
+        </button>
       </form>
     </>
-  )
-}
+  );
+};
 
-export default CreateForm
+export default CreateForm;

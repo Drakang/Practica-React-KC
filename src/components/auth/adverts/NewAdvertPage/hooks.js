@@ -30,7 +30,7 @@ export const useElement = (inputProps) => {
       break
     }
     default: {
-      console.log("Choy el defesto")
+      console.log("Por Defecto")
       break
     }
   }

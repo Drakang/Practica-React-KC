@@ -2,7 +2,13 @@ import client, {
   removeAuthorizationHeader,
   setAuthorizationHeader,
 } from "../../api/client"
+
 import storage from "../../utils/storage"
+const config =  {
+  headers: {
+      'Content-Type': 'multipart/form-data'
+  }
+}
 
 export const login = async (credentials) => {
   const { accessToken } = await client.post("/api/auth/login", credentials)
@@ -26,10 +32,10 @@ export const getAdverts = async () => {
   return await client.get(url)
 }
 
-export const createAdvert = async (data) => {
+export const createAdvert = data => {
   const url = `/api/v1/adverts`
-  return await client.post(url, data)
-}
+  return client.post(url, data, config);
+};
 
 export const getTags = async () => {
   return await client.get("/api/v1/adverts/tags")

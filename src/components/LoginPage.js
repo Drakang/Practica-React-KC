@@ -47,7 +47,7 @@ const LoginPage = () => {
   return (
     <>
       <div className="login-container">
-        <h2 className="login_h2">Logeate Aqui </h2>
+        <h2 className="login_h2">Logueate Aqui </h2>
         <form onSubmit={handleSubmit} className="form-login">
           <label htmlFor="login-input-user" className="login__label">
             Email
